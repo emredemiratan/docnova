@@ -1,0 +1,69 @@
+{
+    "global": {
+        "yes": "Yes",
+        "no": "No"
+    },
+    "header": {
+      "home": "Home",
+      "logout": "Logout"
+   },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "sthWrong": "Something went wrong",
+      "passwordRequired": "Password is required"
+   },
+   "invoiceList": {
+      "title": "Invoices",
+      "invoiceNumber": "Invoice Number",
+      "customerName": "Customer Name",
+      "supplierName": "Supplier Name",
+      "documentType": "Document Type",
+      "amount": "Amount",
+      "action": "Action",
+      "detail": "Detail"
+   },
+    "invoiceDetail": {
+        "title": "Invoice Detail",
+        "notFound": "Invoice not found or not selected yet.",
+        "goBack": "Go Back",
+        "invoice": "Invoice",
+        "issueDate": "Issue Date",
+        "dueDate": "Due Date",
+        "supplierInfo": "Supplier Information",
+        "supplierName": "Supplier Name",
+        "supplierVat": "Supplier VAT",
+        "supplierId": "Supplier ID",
+        "supplierCountryCode": "Supplier Country Code",
+        "supplierEndpoint": "Supplier Endpoint",
+        "customerInfo": "Customer Information",
+        "customerName": "Customer Name",
+        "customerVat": "Customer VAT",
+        "customerId": "Customer ID",
+        "customerCountryCode": "Customer Country Code",
+        "customerEndpoint": "Customer Endpoint",
+        "paymentDetails": "Payment Details",
+        "payableAmount": "Payable Amount",
+        "taxInclusiveAmount": "Tax Inclusive Amount",
+        "taxExclusiveAmount": "Tax Exclusive Amount",
+        "paidAmount": "Paid Amount",
+        "remainingAmount": "Remaining Amount",
+        "invoiceInfo": "Invoice Information",
+        "status": "Status",
+        "documentType": "Document Type",
+        "type": "Type",
+        "typeCode": "Type Code",
+        "source": "Source",
+        "sendViaPeppol": "Sent via Peppol",
+        "systemInfo": "System Information",
+        "createdTime": "Created Time",
+        "lastUpdatedTime": "Last Updated Time",
+        "fileName": "File Name",
+        "status.paid": "Paid",
+        "status.pending": "Pending",
+        "status.late": "Late",
+        "status.sent": "Sent"
+    }
+}

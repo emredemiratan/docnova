@@ -1,0 +1,19 @@
+{
+   "header": {
+      "home": "Home",
+      "logout": "Logout"
+   },
+   "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "success": "Login successful!",
+      "sthWrong": "Something went wrong!",
+      "emailRequired": "Please input your email!",
+      "passwordRequired": "Please input your password!"
+   },
+   "invoiceList": {
+      "title": "Invoice List"
+   }
+} 
