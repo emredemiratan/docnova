@@ -2,6 +2,8 @@
 
 Bu proje, React, Vite, Redux Toolkit ve Ant Design kullanılarak geliştirilmiş modern bir fatura yönetim uygulamasıdır. Kullanıcıların faturalarını listelemelerine, detaylarını görüntülemelerine ve yeni faturalar oluşturmalarına olanak tanır. Uygulama, çoklu dil desteği ve tema değiştirme gibi özellikler de sunmaktadır.
 
+[Docnova Fatura Yönetim Paneli ](https://docnova-ovzy.vercel.app/) - https://docnova-ovzy.vercel.app
+
 ## Kullanılan Teknolojiler
 
 •⁠ ⁠*Frontend:*
