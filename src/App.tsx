@@ -1,16 +1,16 @@
 // App.tsx
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from './redux/store';
-import Login from './pages/Login';
-import InvoiceList from './pages/InvoiceList';
-import InvoiceDetail from './pages/InvoiceDetail';
+const Login = lazy(() => import('./pages/Login'));
+const InvoiceList = lazy(() => import('./pages/InvoiceList'));
+const InvoiceDetail = lazy(() => import('./pages/InvoiceDetail'));
 import ProtectedRoute from './components/ProtectedRoute';
 import Header from './components/Header';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Layout, ConfigProvider, theme } from 'antd';
+import { Layout, ConfigProvider, theme, Spin } from 'antd';
 
 const { Content } = Layout;
 
@@ -39,26 +39,34 @@ const App: React.FC = () => {
                <Header />
                <Content className="app-content">
                   <ToastContainer theme={mode} />
-                  <Routes>
-                     <Route path="/" element={user ? <Navigate to="/invoice-list" /> : <Navigate to="/login" />} />
-                     <Route path="/login" element={user ? <Navigate to="/invoice-list" /> : <Login />} />
-                     <Route
-                        path="/invoice-list"
-                        element={
-                           <ProtectedRoute>
-                              <InvoiceList />
-                           </ProtectedRoute>
-                        }
-                     />
-                     <Route
-                        path="/invoice-detail/:id"
-                        element={
-                           <ProtectedRoute>
-                              <InvoiceDetail />
-                           </ProtectedRoute>
-                        }
-                     />
-                  </Routes>
+                  <Suspense
+                     fallback={
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '50vh' }}>
+                           <Spin size="large" />
+                        </div>
+                     }
+                  >
+                     <Routes>
+                        <Route path="/" element={user ? <Navigate to="/invoice-list" /> : <Navigate to="/login" />} />
+                        <Route path="/login" element={user ? <Navigate to="/invoice-list" /> : <Login />} />
+                        <Route
+                           path="/invoice-list"
+                           element={
+                              <ProtectedRoute>
+                                 <InvoiceList />
+                              </ProtectedRoute>
+                           }
+                        />
+                        <Route
+                           path="/invoice-detail/:id"
+                           element={
+                              <ProtectedRoute>
+                                 <InvoiceDetail />
+                              </ProtectedRoute>
+                           }
+                        />
+                     </Routes>
+                  </Suspense>
                </Content>
             </Layout>
          </Router>
