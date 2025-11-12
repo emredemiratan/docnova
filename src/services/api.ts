@@ -9,7 +9,7 @@ import i18n from '../i18n';
 // - Fallback to public API URL in production if no env is set
 const apiBaseUrl =
    (import.meta as any).env?.VITE_API_BASE_URL ??
-   ((import.meta as any).env?.DEV ? '/api' : 'https://api-dev.docnova.ai');
+   ((import.meta as any).env?.DEV ? '/api' : '/api/proxy');
 
 const api = axios.create({
    baseURL: apiBaseUrl,
