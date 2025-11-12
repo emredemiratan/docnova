@@ -75,7 +75,13 @@ const InvoiceList: React.FC = () => {
    return (
       <div style={{ padding: 24, minHeight: 360 }}>
          <Card title={t('invoiceList.title')}>
-            <Table loading={loading === 'pending'} dataSource={invoices} columns={columns} rowKey="id" />
+            <Table
+               loading={loading === 'pending'}
+               dataSource={invoices}
+               columns={columns}
+               rowKey="id"
+               scroll={{ x: 'max-content' }}
+            />
          </Card>
       </div>
    );

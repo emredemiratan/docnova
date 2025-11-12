@@ -1,5 +1,5 @@
 // App.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from './redux/store';
@@ -18,6 +18,16 @@ const App: React.FC = () => {
    const user = useSelector((state: RootState) => state.user.user);
    const { mode } = useSelector((state: RootState) => state.theme);
 
+   useEffect(() => {
+      const backgroundColor = mode === 'dark' ? '#141414' : '#ffffff';
+      document.documentElement.style.backgroundColor = backgroundColor;
+      document.body.style.backgroundColor = backgroundColor;
+      const rootEl = document.getElementById('root');
+      if (rootEl) {
+         rootEl.style.backgroundColor = backgroundColor;
+      }
+   }, [mode]);
+
    return (
       <ConfigProvider
          theme={{
@@ -27,7 +37,7 @@ const App: React.FC = () => {
          <Router>
             <Layout style={{ minHeight: '100vh' }}>
                <Header />
-               <Content style={{ padding: '0 50px' }}>
+               <Content className="app-content">
                   <ToastContainer theme={mode} />
                   <Routes>
                      <Route path="/" element={user ? <Navigate to="/invoice-list" /> : <Navigate to="/login" />} />

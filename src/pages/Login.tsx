@@ -33,8 +33,8 @@ const Login: React.FC = () => {
 
    return (
       <Row justify="center" align="middle" style={{ minHeight: 'calc(100vh - 64px)' }}>
-         <Col>
-            <Card style={{ width: 400, boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)' }}>
+         <Col xs={24}>
+            <Card style={{ width: '100%', maxWidth: 400, margin: '0 auto', boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)' }}>
                <div style={{ textAlign: 'center', marginBottom: '24px' }}>
                   <Title level={2}>{t('login.title')}</Title>
                </div>

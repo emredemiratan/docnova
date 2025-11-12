@@ -1,8 +1,13 @@
 {
     "global": {
         "yes": "Evet",
-        "no": "Hayır"
+        "no": "Hayır",
+        "error": "Hata"
     },
+    "header": {
+      "home": "Ana Sayfa",
+      "logout": "Çıkış Yap"
+   },
     "login": {
       "title": "Giriş Yap",
       "email": "E-posta",

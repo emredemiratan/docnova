@@ -24,10 +24,15 @@ const Header: React.FC = () => {
    };
 
    return (
-      <AntHeader style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <AntHeader style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
          {user ? (
             <>
-               <Menu theme={mode} mode="horizontal" defaultSelectedKeys={['home']} style={{ flex: 1, borderBottom: 'none', background: 'transparent' }}>
+               <Menu
+                  theme={mode}
+                  mode="horizontal"
+                  defaultSelectedKeys={['home']}
+                  style={{ flex: 1, minWidth: 200, borderBottom: 'none', background: 'transparent' }}
+               >
                   <Menu.Item key="home">
                      <Link to="/">{t('header.home')}</Link>
                   </Menu.Item>

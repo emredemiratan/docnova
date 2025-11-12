@@ -1,7 +1,8 @@
 {
     "global": {
         "yes": "Yes",
-        "no": "No"
+        "no": "No",
+        "error": "Error"
     },
     "header": {
       "home": "Home",
@@ -13,7 +14,9 @@
       "password": "Password",
       "submit": "Login",
       "sthWrong": "Something went wrong",
-      "passwordRequired": "Password is required"
+      "passwordRequired": "Password is required",
+      "emailRequired": "Please enter your email address!",
+      "success": "Login successful!"
    },
    "invoiceList": {
       "title": "Invoices",
