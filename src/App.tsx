@@ -47,8 +47,8 @@ const App: React.FC = () => {
                      }
                   >
                      <Routes>
-                        <Route path="/" element={user ? <Navigate to="/invoice-list" /> : <Navigate to="/login" />} />
-                        <Route path="/login" element={user ? <Navigate to="/invoice-list" /> : <Login />} />
+                        <Route path="/" element={<Navigate to="/login" />} />
+                        <Route path="/login" element={<Login />} />
                         <Route
                            path="/invoice-list"
                            element={

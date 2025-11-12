@@ -34,7 +34,7 @@ const Header: React.FC = () => {
                   style={{ flex: 1, minWidth: 200, borderBottom: 'none', background: 'transparent' }}
                >
                   <Menu.Item key="home">
-                     <Link to="/">{t('header.home')}</Link>
+                     <Link to="/invoice-list">{t('header.home')}</Link>
                   </Menu.Item>
                </Menu>
                <Space align="center">
