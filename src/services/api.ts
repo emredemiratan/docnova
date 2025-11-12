@@ -3,8 +3,16 @@ import { store } from '../redux/store';
 import { toast } from 'react-toastify';
 import i18n from '../i18n';
 
+// Determine API base URL:
+// - Prefer VITE_API_BASE_URL if provided at build time
+// - Use '/api' only in dev to leverage Vite proxy
+// - Fallback to public API URL in production if no env is set
+const apiBaseUrl =
+   (import.meta as any).env?.VITE_API_BASE_URL ??
+   ((import.meta as any).env?.DEV ? '/api' : 'https://api-dev.docnova.ai');
+
 const api = axios.create({
-   baseURL: '/api',
+   baseURL: apiBaseUrl,
    headers: {
       'Content-Type': 'application/json',
    },
